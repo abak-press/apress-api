@@ -30,6 +30,8 @@ module Apress
         def helper_method(*); end
 
         def helper(*); end
+
+        def include_all_helpers=(*); end
         # :nocov:
       end
     end

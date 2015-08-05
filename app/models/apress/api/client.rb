@@ -53,6 +53,8 @@ module Apress
       def set_refresh_token_expiration
         self.refresh_token_expire_at = Rails.application.config.api[:refresh_token_ttl].from_now
       end
+
+      ActiveSupport.run_load_hooks(:"apress/api/client", self)
     end
   end
 end

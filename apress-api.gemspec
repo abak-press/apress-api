@@ -19,9 +19,9 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   spec.add_runtime_dependency "rails", ">= 3.1.0"
-  spec.add_runtime_dependency "pg", ">= 0.18.2"
+  spec.add_runtime_dependency "pg", ">= 0.16"
   spec.add_runtime_dependency "api-auth", ">= 1.3.1"
-  spec.add_runtime_dependency "oj", ">= 2.12.10"
+  spec.add_runtime_dependency "oj", ">= 2.9.9"
   spec.add_runtime_dependency "multi_json", ">= 1.11.2"
   spec.add_runtime_dependency "jbuilder", ">= 2.3.1"
   spec.add_runtime_dependency "attr_extras", ">= 4.4.0"
