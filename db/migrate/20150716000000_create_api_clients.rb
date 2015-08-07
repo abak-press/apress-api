@@ -5,7 +5,6 @@ class CreateApiClients < ActiveRecord::Migration
   def up
     create_table :api_clients, comment: "Пользователи API" do |t|
       t.string :access_id, null: false, limit: 36, comment: "Уникальный ID пользователя"
-      t.string :device_id, limit: 36, comment: "ID устройства мобильного пользователя"
       t.string :secret_token, null: false, comment: "Секретный ключ для подписи запроса"
       t.datetime :secret_token_expire_at, null: false, comment: "Время протухания"
       t.string :refresh_token, null: false, comment: "Ключ для получения нового секретного ключа"

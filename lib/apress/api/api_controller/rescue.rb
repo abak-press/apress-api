@@ -5,7 +5,7 @@ module Apress
         extend ActiveSupport::Concern
 
         included do
-          rescue_from "Exception", :server_error if Rails.env.production?
+          rescue_from "Exception", with: :server_error if Rails.env.production?
 
           rescue_from(
             "ActiveRecord::RecordNotFound",
