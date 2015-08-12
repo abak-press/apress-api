@@ -7,6 +7,8 @@ module Apress
         included do
           rescue_from "Exception", with: :server_error if Rails.env.production?
 
+          rescue_from "Pundit::NotAuthorizedError", with: :forbidden
+
           rescue_from(
             "ActiveRecord::RecordNotFound",
             "ActionController::ParameterMissing",
