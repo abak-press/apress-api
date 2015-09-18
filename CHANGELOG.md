@@ -1,5 +1,9 @@
 
 #### [Current]
+ * 2015-09-17 [b09a647](../../commit/b09a647) - __(Sergey Kucher)__ chore: move match_json_schema from barmen pc4-15522
+
+#### v0.0.2
+ * 2015-08-12 [a508c89](../../commit/a508c89) - __(Michail Merkushin)__ Release 0.0.2
  * 2015-08-12 [a1f5e0d](../../commit/a1f5e0d) - __(Michail Merkushin)__ feature: respond with 403 on Pundit errors
 
 #### v0.0.1
