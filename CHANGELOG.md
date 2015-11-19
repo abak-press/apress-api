@@ -1,5 +1,9 @@
 
 #### [Current]
+ * 2015-11-18 [4b336ed](../../commit/4b336ed) - __(Denis Korobitcin)__ feature(api-rescue): render_json method
+
+#### v0.1.0
+ * 2015-09-18 [3dc5fa5](../../commit/3dc5fa5) - __(Michail Merkushin)__ Release 0.1.0
  * 2015-09-17 [b09a647](../../commit/b09a647) - __(Sergey Kucher)__ chore: move match_json_schema from barmen pc4-15522
 
 #### v0.0.2
