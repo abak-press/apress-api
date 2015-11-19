@@ -38,6 +38,7 @@ module Apress
         include Rescue
         include Responds
         include Authentification
+        include Rendering
 
         ActiveSupport.run_load_hooks(:action_controller, self)
         ActiveSupport.run_load_hooks(:"apress/api/api_controller", self)
