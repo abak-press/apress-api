@@ -1,5 +1,9 @@
 
 #### [Current]
+ * 2015-12-16 [d5d46a6](../../commit/d5d46a6) - __(Michail Merkushin)__ feature: make AuthService#access_id as public meth
+
+#### v0.2.0
+ * 2015-11-19 [ab432ed](../../commit/ab432ed) - __(Michail Merkushin)__ Release 0.2.0
  * 2015-11-18 [4b336ed](../../commit/4b336ed) - __(Denis Korobitcin)__ feature(api-rescue): render_json method
 
 #### v0.1.0
