@@ -3,6 +3,7 @@ require "bundler/setup"
 require "simplecov"
 SimpleCov.start "rails" do
   minimum_coverage 95
+  add_filter "/lib/apress/api/testing/"
 end
 
 require "pry-debugger"
