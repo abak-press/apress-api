@@ -20,11 +20,11 @@ module Apress
         ::ApiAuth.authentic?(request, client.secret_token)
       end
 
-      private
-
       def access_id
         @access_id ||= ApiAuth.access_id(request) || query_parameters[:access_id]
       end
+
+      private
 
       def not_check_signature?
         check_signature = query_parameters[:check_signature]
