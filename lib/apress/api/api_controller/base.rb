@@ -22,6 +22,7 @@ module Apress
         include ActionController::StrongParameters if Rails::VERSION::MAJOR >= 4
         include ActionController::MimeResponds
         include ActionController::ImplicitRender
+        include ActionController::Helpers
 
         # https://github.com/rails/strong_parameters/pull/199
         if Rails::VERSION::MAJOR == 3
@@ -38,7 +39,6 @@ module Apress
         include Rescue
         include Responds
         include Authentification
-        include Rendering
 
         ActiveSupport.run_load_hooks(:action_controller, self)
         ActiveSupport.run_load_hooks(:"apress/api/api_controller", self)

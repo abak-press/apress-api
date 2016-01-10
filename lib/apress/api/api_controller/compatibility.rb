@@ -27,8 +27,6 @@ module Apress
 
         def allow_forgery_protection=(*); end
 
-        def helper_method(*); end
-
         def helper(*); end
 
         def include_all_helpers=(*); end
