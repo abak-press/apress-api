@@ -1,5 +1,9 @@
 
 #### [Current]
+ * 2016-01-10 [464b9c8](../../commit/464b9c8) - __(Michail Merkushin)__ feature: not always return 200 when ajax
+
+#### v0.2.1
+ * 2015-12-16 [b29e4c1](../../commit/b29e4c1) - __(Michail Merkushin)__ Release 0.2.1
  * 2015-12-16 [d5d46a6](../../commit/d5d46a6) - __(Michail Merkushin)__ feature: make AuthService#access_id as public meth
 
 #### v0.2.0
