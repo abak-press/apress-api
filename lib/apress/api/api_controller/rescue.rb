@@ -9,14 +9,14 @@ module Apress
 
           rescue_from "Pundit::NotAuthorizedError", with: :forbidden
 
-          rescue_from(
-            "ActiveRecord::RecordNotFound",
-            "ActionController::ParameterMissing",
-            "ActionView::MissingTemplate",
-            "ActionController::UnknownFormat",
-            "ActiveRecord::SubclassNotFound") do |exception|
-            render_error(404, exception)
-          end unless Rails.env.development?
+          rescue_from "ActiveRecord::RecordNotFound",
+                      "ActionController::ParameterMissing",
+                      "ActionView::MissingTemplate",
+                      "ActionController::UnknownFormat",
+                      "ActiveRecord::SubclassNotFound",
+                      with: :not_found unless Rails.env.development?
+
+          helper_method :show_errors?
         end
 
         private
@@ -25,37 +25,38 @@ module Apress
           render_error(500, exception)
         end
 
-        def not_found
-          render_error(404)
+        def not_found(exception = nil)
+          render_error(404, exception)
         end
 
-        def forbidden
-          render_error(403)
+        def forbidden(exception = nil)
+          render_error(403, exception)
         end
 
-        def bad_request
-          render_error(400)
+        def bad_request(exception = nil)
+          render_error(400, exception)
         end
 
         def render_error(status, exception = nil)
-          payload = {status: status}
+          @status = status
+          @exception = exception
 
-          if exception
-            payload[:error] = exception.message
-            payload[:backtrace] = exception.backtrace if error_backtrace?(exception)
-            log_error(exception)
-          end
+          log_error(exception) if exception
 
-          render json: payload, status: request.xhr? ? 200 : status
+          render "apress/api/shared/error", status: status
         end
 
         def log_error(exception)
           Rails.logger.error(exception.message)
-          Rails.logger.error(exception.backtrace.join("/n")) if error_backtrace?(exception)
+          Rails.logger.error(exception.backtrace.join("/n")) if exception.backtrace.present?
         end
 
-        def error_backtrace?(exception)
-          exception.backtrace && (Rails.env.staging? || !Rails.env.production?)
+        def show_errors?
+          soft_environment?
+        end
+
+        def soft_environment?
+          Rails.env.staging? || !Rails.env.production?
         end
       end
     end

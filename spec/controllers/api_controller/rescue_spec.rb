@@ -26,8 +26,8 @@ describe Apress::Api::ApiController::Base, type: :controller do
 
         expect(response.status).to eq 400
         expect(json["status"]).to eq 400
-        expect(json["error"]).to eq "message"
-        expect(json["backtrace"][0]).to eq "path/to/file"
+        expect(json["error"]["message"]).to eq "message"
+        expect(json["error"]["backtrace"][0]).to eq "path/to/file"
       end
     end
 
@@ -45,8 +45,8 @@ describe Apress::Api::ApiController::Base, type: :controller do
 
         expect(response.status).to eq 500
         expect(json["status"]).to eq 500
-        expect(json["error"]).to eq "message"
-        expect(json["backtrace"][0]).to eq "path/to/file"
+        expect(json["error"]["message"]).to eq "message"
+        expect(json["error"]["backtrace"][0]).to eq "path/to/file"
       end
     end
 
@@ -63,24 +63,6 @@ describe Apress::Api::ApiController::Base, type: :controller do
         expect(response.status).to eq 404
         expect(json["status"]).to eq 404
         expect(json["error"]).to be nil
-        expect(json["backtrace"]).to be nil
-      end
-    end
-
-    context "when request xhr" do
-      controller do
-        def index
-          not_found
-        end
-      end
-
-      it do
-        xhr :get, :index
-
-        expect(response.status).to eq 200
-        expect(json["status"]).to eq 404
-        expect(json["error"]).to be nil
-        expect(json["backtrace"]).to be nil
       end
     end
   end
