@@ -23,6 +23,7 @@ module Apress
         include ActionController::MimeResponds
         include ActionController::ImplicitRender
         include ActionController::Helpers
+        include ActionController::Caching
 
         # https://github.com/rails/strong_parameters/pull/199
         if Rails::VERSION::MAJOR == 3
