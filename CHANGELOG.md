@@ -1,5 +1,9 @@
 
 #### [Current]
+ * 2016-03-14 [cb8f200](../../commit/cb8f200) - __(Denis Korobitcin)__ feature: added caching module
+
+#### v1.0.0
+ * 2016-01-12 [7aefc6f](../../commit/7aefc6f) - __(Michail Merkushin)__ Release 1.0.0
  * 2016-01-10 [464b9c8](../../commit/464b9c8) - __(Michail Merkushin)__ feature: not always return 200 when ajax
 
 #### v0.2.1
