@@ -1,5 +1,9 @@
 
 #### [Current]
+ * 2016-03-28 [20d6676](../../commit/20d6676) - __(Salahutdinov Dmitry)__ feature: пагинация в заголовках
+
+#### v1.1.0
+ * 2016-03-16 [c9ab3dd](../../commit/c9ab3dd) - __(Michail Merkushin)__ Release 1.1.0
  * 2016-03-14 [cb8f200](../../commit/cb8f200) - __(Denis Korobitcin)__ feature: added caching module
 
 #### v1.0.0
