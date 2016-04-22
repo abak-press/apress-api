@@ -2,11 +2,6 @@ module Apress
   module Api
     module ApiController
       module Compatibility
-        # :nocov:
-        def cache_store; end
-
-        def cache_store=(*); end
-
         def assets_dir=(*); end
 
         def javascripts_dir=(*); end
@@ -20,8 +15,6 @@ module Apress
         def asset_host=(*); end
 
         def relative_url_root=(*); end
-
-        def perform_caching=(*); end
 
         def helpers_path=(*); end
 
