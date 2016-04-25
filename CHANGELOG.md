@@ -1,5 +1,9 @@
 
 #### [Current]
+ * 2016-04-25 [faf3bde](../../commit/faf3bde) - __(Michail Merkushin)__ feature: Allways find current_api_client
+
+#### v1.2.0
+ * 2016-03-30 [3116d82](../../commit/3116d82) - __(Michail Merkushin)__ Release 1.2.0
  * 2016-03-28 [20d6676](../../commit/20d6676) - __(Salahutdinov Dmitry)__ feature: пагинация в заголовках
 
 #### v1.1.0
