@@ -7,19 +7,20 @@ module Apress
         included do
           attr_reader :current_api_client
 
+          before_filter :find_session
           before_filter :authenticate
         end
 
         private
 
-        def authenticate
+        def find_session
           auth_service = AuthService.new(request)
-          if auth_service.call
-            @current_api_client = auth_service.client
-            return
-          end
+          return unless auth_service.call
+          @current_api_client = auth_service.client
+        end
 
-          forbidden
+        def authenticate
+          forbidden unless @current_api_client
         end
       end
     end
