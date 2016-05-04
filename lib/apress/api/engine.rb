@@ -12,6 +12,8 @@ module Apress
         }
 
         ::MultiJson.use :oj
+
+        JbuilderTemplate.send :include, Apress::Api::Extensions::Jbuilder::JbuilderTemplate
       end
 
       initializer "apress-api-factories", after: "factory_girl.set_factory_paths" do
