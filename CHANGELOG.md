@@ -1,5 +1,10 @@
 
 #### [Current]
+ * 2016-04-29 [1635272](../../commit/1635272) - __(Denis Korobicyn)__ feature: json paginating_cache helper
+ * 2016-04-22 [966ac22](../../commit/966ac22) - __(Denis Korobicyn)__ feature: removed cache stubs
+
+#### v1.3.0
+ * 2016-04-25 [889419f](../../commit/889419f) - __(Michail Merkushin)__ Release 1.3.0
  * 2016-04-25 [faf3bde](../../commit/faf3bde) - __(Michail Merkushin)__ feature: Allways find current_api_client
 
 #### v1.2.0
