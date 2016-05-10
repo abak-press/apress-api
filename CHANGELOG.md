@@ -1,5 +1,9 @@
 
 #### [Current]
+ * 2016-05-06 [c8935c8](../../commit/c8935c8) - __(Denis Korobicyn)__ feature: paginating params preprocessing
+
+#### v1.4.0
+ * 2016-05-04 [ad0bc33](../../commit/ad0bc33) - __(Michail Merkushin)__ Release 1.4.0
  * 2016-04-29 [1635272](../../commit/1635272) - __(Denis Korobicyn)__ feature: json paginating_cache helper
  * 2016-04-22 [966ac22](../../commit/966ac22) - __(Denis Korobicyn)__ feature: removed cache stubs
 
