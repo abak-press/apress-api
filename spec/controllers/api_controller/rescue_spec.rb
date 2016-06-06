@@ -6,11 +6,12 @@ describe Apress::Api::ApiController::Base, type: :controller do
   let(:client) { create "api/client" }
   let(:json) { JSON.parse(response.body) }
 
+  before do
+    allow(controller).to receive(:authenticate)
+    allow(controller).to receive(:current_api_client).and_return(client)
+  end
+
   describe "#render_error" do
-    before do
-      allow(controller).to receive(:authenticate)
-      allow(controller).to receive(:current_api_client).and_return(client)
-    end
 
     context "when exception given" do
       controller do
@@ -63,6 +64,60 @@ describe Apress::Api::ApiController::Base, type: :controller do
         expect(response.status).to eq 404
         expect(json["status"]).to eq 404
         expect(json["error"]).to be nil
+      end
+    end
+  end
+
+  describe '#unproccesable' do
+    let(:record) { build 'api/client' }
+
+    before do
+      record.errors.add(:access_id, 'empty')
+      allow(controller).to receive(:record).and_return(record)
+    end
+
+    context 'when rescued from exeption' do
+      controller do
+        def index
+          raise ActiveRecord::RecordInvalid.new(record)
+        end
+      end
+
+      it 'renders errors' do
+        get :index
+
+        expect(response.status).to eq 422
+        expect(json['errors']).to eq [{"access_id" => "empty"}]
+      end
+    end
+
+    context 'when called from action' do
+      controller do
+        def index
+          unprocessable(record.errors)
+        end
+      end
+
+      it 'renders errors' do
+        get :index
+
+        expect(response.status).to eq 422
+        expect(json['errors']).to eq [{"access_id" => "empty"}]
+      end
+    end
+
+    context 'when called from action with multiple errors' do
+      controller do
+        def index
+          unprocessable([record.errors, 'other' => 'error'])
+        end
+      end
+
+      it 'renders errors' do
+        get :index
+
+        expect(response.status).to eq 422
+        expect(json['errors']).to eq [{"access_id" => "empty"}, {'other' => 'error'}]
       end
     end
   end
