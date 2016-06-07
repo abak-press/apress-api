@@ -1,5 +1,9 @@
 
 #### [Current]
+ * 2016-06-06 [022ec6a](../../commit/022ec6a) - __(Denis Korobicyn)__ feature: unproccessable method
+
+#### v1.5.0
+ * 2016-05-10 [69157b4](../../commit/69157b4) - __(Michail Merkushin)__ Release 1.5.0
  * 2016-05-06 [c8935c8](../../commit/c8935c8) - __(Denis Korobicyn)__ feature: paginating params preprocessing
 
 #### v1.4.0
