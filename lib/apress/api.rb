@@ -5,5 +5,6 @@ require "multi_json"
 require "jbuilder"
 require "api_auth"
 require "attr_extras"
+require 'swagger/blocks'
 require "apress/api/version"
 require "apress/api/engine"
