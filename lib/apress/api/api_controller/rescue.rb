@@ -43,6 +43,8 @@ module Apress
           @errors =
             if exception_or_errors.respond_to?(:record)
               exception_or_errors.record.errors
+            elsif exception_or_errors.is_a?(StandardError)
+              {message: exception_or_errors.message}
             else
               exception_or_errors
             end

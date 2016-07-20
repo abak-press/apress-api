@@ -76,7 +76,7 @@ describe Apress::Api::ApiController::Base, type: :controller do
       allow(controller).to receive(:record).and_return(record)
     end
 
-    context 'when rescued from exeption' do
+    context 'when rescued from record invalid' do
       controller do
         def index
           raise ActiveRecord::RecordInvalid.new(record)
@@ -88,6 +88,26 @@ describe Apress::Api::ApiController::Base, type: :controller do
 
         expect(response.status).to eq 422
         expect(json['errors']).to eq [{"access_id" => "empty"}]
+      end
+    end
+
+    context 'when rescued from standard error' do
+      controller do
+        class CustomError < StandardError
+        end
+
+        rescue_from CustomError, with: :unprocessable
+
+        def index
+          raise CustomError.new("custom error")
+        end
+      end
+
+      it "renders error" do
+        get :index
+
+        expect(response.status).to eq 422
+        expect(json['errors']).to eq [{"message" => "custom error"}]
       end
     end
 
