@@ -1,5 +1,9 @@
 
 #### [Current]
+ * 2016-07-20 [39880d3](../../commit/39880d3) - __(Sergey Kucher)__ feature: ability to handle standard error's descendants for unprocessable
+
+#### v1.6.0
+ * 2016-06-07 [6617804](../../commit/6617804) - __(Michail Merkushin)__ Release 1.6.0
  * 2016-06-06 [022ec6a](../../commit/022ec6a) - __(Denis Korobicyn)__ feature: unproccessable method
 
 #### v1.5.0
