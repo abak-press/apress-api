@@ -1,5 +1,9 @@
 
 #### [Current]
+ * 2016-07-13 [59e65ec](../../commit/59e65ec) - __(Denis Korobicyn)__ feature: swagger documentation
+
+#### v1.7.0
+ * 2016-07-21 [643a763](../../commit/643a763) - __(Michail Merkushin)__ Release 1.7.0
  * 2016-07-20 [39880d3](../../commit/39880d3) - __(Sergey Kucher)__ feature: ability to handle standard error's descendants for unprocessable
 
 #### v1.6.0
