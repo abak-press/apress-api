@@ -4,6 +4,8 @@ require "simplecov"
 SimpleCov.start "rails" do
   minimum_coverage 95
   add_filter "/lib/apress/api/testing/"
+  add_filter "/lib/apress/api/swagger/"
+  add_filter "/app/docs"
 end
 
 require "pry-debugger"
