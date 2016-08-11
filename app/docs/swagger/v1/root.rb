@@ -13,7 +13,6 @@ module Swagger
           end
         end
 
-        key :host, defined?(HOST) ? HOST : '/'
         key :basePath, '/api/v1'
         key :produces, ['application/json']
 
