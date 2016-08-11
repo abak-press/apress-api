@@ -9,7 +9,7 @@ module Swagger
           key :description, 'Apress API'
           key :termsOfService, 'None'
           contact do
-            key :name, 'Aback-Press Team'
+            key :name, 'Abak-Press Team'
           end
         end
 
