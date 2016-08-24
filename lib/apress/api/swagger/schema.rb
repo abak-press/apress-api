@@ -9,7 +9,11 @@ module Apress
         end
 
         def self.swagger_classes
-          ObjectSpace.each_object(Class).select { |klass| klass < self }
+          @swagger_classes ||= []
+        end
+
+        def self.inherited(child)
+          swagger_classes << child
         end
       end
     end
