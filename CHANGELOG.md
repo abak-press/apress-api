@@ -1,5 +1,11 @@
 
 #### [Current]
+ * 2016-08-23 [4f83163](../../commit/4f83163) - __(Salahutdinov Dmitry)__ feature: speed up swagger load
+ * 2016-08-11 [0adce54](../../commit/0adce54) - __(Salahutdinov Dmitry)__ fix: minor type fix
+ * 2016-08-10 [93678e7](../../commit/93678e7) - __(Salahutdinov Dmitry)__ fix: try out swaggered api from any host/port, use hostless path
+
+#### v1.8.0
+ * 2016-07-25 [af3c778](../../commit/af3c778) - __(Michail Merkushin)__ Release 1.8.0
  * 2016-07-13 [59e65ec](../../commit/59e65ec) - __(Denis Korobicyn)__ feature: swagger documentation
 
 #### v1.7.0
