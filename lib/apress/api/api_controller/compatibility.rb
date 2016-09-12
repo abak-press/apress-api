@@ -10,10 +10,6 @@ module Apress
 
         def page_cache_directory=(*); end
 
-        def asset_path=(*); end
-
-        def asset_host=(*); end
-
         def relative_url_root=(*); end
 
         def helpers_path=(*); end
