@@ -1,5 +1,10 @@
 
 #### [Current]
+ * 2016-09-12 [2f52c26](../../commit/2f52c26) - __(Denis Korobicyn)__ chore: lock rails < 5.0.0
+ * 2016-09-12 [cbb16ec](../../commit/cbb16ec) - __(Denis Korobicyn)__ fix: remove asset_path hacks
+
+#### v1.8.1
+ * 2016-08-24 [6981699](../../commit/6981699) - __(Michail Merkushin)__ Release 1.8.1
  * 2016-08-23 [4f83163](../../commit/4f83163) - __(Salahutdinov Dmitry)__ feature: speed up swagger load
  * 2016-08-11 [0adce54](../../commit/0adce54) - __(Salahutdinov Dmitry)__ fix: minor type fix
  * 2016-08-10 [93678e7](../../commit/93678e7) - __(Salahutdinov Dmitry)__ fix: try out swaggered api from any host/port, use hostless path
