@@ -24,6 +24,7 @@ module Apress
         include ActionController::ImplicitRender
         include ActionController::Helpers
         include ActionController::Caching
+        include AbstractController::AssetPaths
 
         # https://github.com/rails/strong_parameters/pull/199
         if Rails::VERSION::MAJOR == 3
