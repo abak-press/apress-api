@@ -1,0 +1,35 @@
+version: '2'
+
+services:
+  app:
+    image: abakpress/ruby:1.9.3
+    environment:
+      - SSH_AUTH_SOCK=/ssh/auth/sock
+      - TEST_DB_HOST=db
+      - TEST_DB_NAME=docker
+      - TEST_DB_USERNAME=postgres
+    command: make
+    volumes:
+      - '.:/app'
+      - '../:/localgems'
+      - ruby-gems:/gems
+      - ssh-data:/ssh:ro
+      - bundler-config:/root/.bundle
+    depends_on:
+      - db
+
+  db:
+    image: abakpress/postgres:9.3
+
+volumes:
+  ruby-gems:
+    external:
+      name: gems-ruby193
+
+  ssh-data:
+    external:
+      name: ssh_data
+
+  bundler-config:
+    external:
+      name: bundler-config
