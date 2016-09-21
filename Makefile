@@ -3,23 +3,10 @@ BUNDLE = RAILS_ENV=${RAILS_ENV} bundle
 RSPEC = rspec
 APPRAISAL = appraisal
 
-define DATABASE_YML
-test:
-  adapter: postgresql
-  database: docker
-  username: docker
-  host: localhost
-  min_messages: warning
-endef
-export DATABASE_YML
-
 all: test
 
-test: configs bundler appraisal
+test: bundler appraisal
 	${BUNDLE} exec ${APPRAISAL} ${RSPEC} spec 2>&1
-
-configs:
-	@echo "$${DATABASE_YML}" > spec/internal/config/database.yml
 
 bundler:
 	gem install bundler
