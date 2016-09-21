@@ -1,5 +1,10 @@
 
 #### [Current]
+ * 2016-09-21 [c7659b1](../../commit/c7659b1) - __(Semyon Pupkov)__ refactor: remove dependency from migration_comments
+ * 2016-09-21 [c157718](../../commit/c157718) - __(Semyon Pupkov)__ chore: add docker-compose
+
+#### v1.8.2
+ * 2016-09-13 [3e91ddf](../../commit/3e91ddf) - __(Denis Korobicyn)__ Release 1.8.2
  * 2016-09-12 [2f52c26](../../commit/2f52c26) - __(Denis Korobicyn)__ chore: lock rails < 5.0.0
  * 2016-09-12 [cbb16ec](../../commit/cbb16ec) - __(Denis Korobicyn)__ fix: remove asset_path hacks
 
