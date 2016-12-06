@@ -1,5 +1,10 @@
 
 #### [Current]
+ * 2016-12-06 [7ea5ec2](../../commit/7ea5ec2) - __(Michail Merkushin)__ chore: Add drone and dip
+ * 2016-12-05 [1242c99](../../commit/1242c99) - __(Michail Merkushin)__ feature: Add newrelic tracers
+
+#### v1.8.3
+ * 2016-09-21 [f526c05](../../commit/f526c05) - __(Semyon Pupkov)__ Release 1.8.3
  * 2016-09-21 [c7659b1](../../commit/c7659b1) - __(Semyon Pupkov)__ refactor: remove dependency from migration_comments
  * 2016-09-21 [c157718](../../commit/c157718) - __(Semyon Pupkov)__ chore: add docker-compose
 
