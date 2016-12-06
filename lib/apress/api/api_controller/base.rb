@@ -37,6 +37,8 @@ module Apress
           include ActionController::StrongParameters
         end
 
+        include ::NewRelic::Agent::Instrumentation::ControllerInstrumentation if defined?(::NewRelic)
+
         extend Compatibility
         include Rescue
         include Responds

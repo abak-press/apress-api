@@ -8,7 +8,6 @@ SimpleCov.start "rails" do
   add_filter "/app/docs"
 end
 
-require "pry-debugger"
 require "apress/api"
 
 require "factory_girl_rails"

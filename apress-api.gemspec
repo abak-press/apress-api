@@ -33,7 +33,6 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rspec-rails", ">= 3.2"
   spec.add_development_dependency "combustion", ">= 0.5.4"
   spec.add_development_dependency "appraisal"
-  spec.add_development_dependency "pry-debugger"
   spec.add_development_dependency "timecop"
   spec.add_development_dependency "simplecov", ">= 0.9"
   spec.add_development_dependency "factory_girl_rails", ">= 4.5"
