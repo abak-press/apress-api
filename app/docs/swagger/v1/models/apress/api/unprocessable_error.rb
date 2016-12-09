@@ -3,7 +3,7 @@ module Swagger
     module Models
       module Apress
         module Api
-          class UnproccesableError < ::Apress::Api::Swagger::Schema
+          class UnprocessableError < ::Apress::Api::Swagger::Schema
             swagger_schema name.to_sym do
               key :required, :errors
 
@@ -18,6 +18,8 @@ module Swagger
               end
             end
           end
+
+          UnproccesableError = UnprocessableError
         end
       end
     end
