@@ -16,11 +16,11 @@ module Swagger
         key :basePath, '/api/v1'
         key :produces, ['application/json']
 
-        security_definition :authorization do
-          key :type, :apikey
-          key :name, :apiKey
-          key :description, 'signature for response'
+        security_definition :APIAuth do
+          key :type, :apiKey
           key :in, :header
+          key :name, 'Authorization'
+          key :description, 'Authentication by access_id token based on HMAC'
         end
       end
     end
