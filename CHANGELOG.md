@@ -1,5 +1,13 @@
 
 #### [Current]
+ * 2016-12-09 [3a4459f](../../commit/3a4459f) - __(Pavel Galkin)__ fix: move UnproccesableError alias to a separate file
+ * 2016-12-08 [ef4ece2](../../commit/ef4ece2) - __(Nikolay Kondratyev)__ feat(gems): add swagger-core dependency
+ * 2016-12-08 [2f188ce](../../commit/2f188ce) - __(Nikolay Kondratyev)__ feat(rspec): add swagger schema matcher
+ * 2016-11-29 [12c2a02](../../commit/12c2a02) - __(Nikolay Kondratyev)__ fix: security definitions
+ * 2016-12-07 [eb10a20](../../commit/eb10a20) - __(Pavel Galkin)__ fix: typo in error class
+
+#### v1.9.0
+ * 2016-12-06 [4c88f51](../../commit/4c88f51) - __(Michail Merkushin)__ Release 1.9.0
  * 2016-12-06 [7ea5ec2](../../commit/7ea5ec2) - __(Michail Merkushin)__ chore: Add drone and dip
  * 2016-12-05 [1242c99](../../commit/1242c99) - __(Michail Merkushin)__ feature: Add newrelic tracers
 
