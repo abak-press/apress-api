@@ -18,8 +18,6 @@ module Swagger
               end
             end
           end
-
-          UnproccesableError = UnprocessableError
         end
       end
     end
