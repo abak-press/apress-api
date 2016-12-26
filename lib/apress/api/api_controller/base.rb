@@ -37,7 +37,22 @@ module Apress
           include ActionController::StrongParameters
         end
 
-        include ::NewRelic::Agent::Instrumentation::ControllerInstrumentation if defined?(::NewRelic)
+        # :nocov:
+        if defined?(::NewRelic)
+          require "new_relic/agent/instrumentation/rails#{Rails::VERSION::MAJOR}/action_controller"
+          require "new_relic/agent/instrumentation/rails#{Rails::VERSION::MAJOR}/errors"
+
+          include ::NewRelic::Agent::Instrumentation::ControllerInstrumentation
+
+          if Rails::VERSION::MAJOR == 3
+            include NewRelic::Agent::Instrumentation::Rails3::ActionController
+            include NewRelic::Agent::Instrumentation::Rails3::Errors
+          elsif Rails::VERSION::MAJOR == 4
+            include NewRelic::Agent::Instrumentation::Rails4::ActionController
+            include NewRelic::Agent::Instrumentation::Rails4::Errors
+          end
+        end
+        # :nocov:
 
         extend Compatibility
         include Rescue
