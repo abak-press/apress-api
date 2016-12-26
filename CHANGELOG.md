@@ -1,5 +1,10 @@
 
 #### [Current]
+ * 2016-12-26 [535561f](../../commit/535561f) - __(Michail Merkushin)__ Release 1.10.1
+ * 2016-12-26 [7663d55](../../commit/7663d55) - __(Michail Merkushin)__ fix: Include Newrelic modules for different Rails versions
+
+#### v1.10.0
+ * 2016-12-09 [5463bdc](../../commit/5463bdc) - __(Denis Korobicyn)__ Release 1.10.0
  * 2016-12-09 [3a4459f](../../commit/3a4459f) - __(Pavel Galkin)__ fix: move UnproccesableError alias to a separate file
  * 2016-12-08 [ef4ece2](../../commit/ef4ece2) - __(Nikolay Kondratyev)__ feat(gems): add swagger-core dependency
  * 2016-12-08 [2f188ce](../../commit/2f188ce) - __(Nikolay Kondratyev)__ feat(rspec): add swagger schema matcher
