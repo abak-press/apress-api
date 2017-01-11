@@ -8,6 +8,7 @@ if RUBY_VERSION < '2'
   gem 'public_suffix', '< 1.5.0'
   gem 'pg', '< 0.19.0'
   gem "pry-debugger", ">= 0.2.3"
+  gem 'nokogiri', '< 1.7.0'
 else
   gem "test-unit"
   gem "pry-byebug"
