@@ -1,5 +1,9 @@
 
 #### [Current]
+ * 2017-01-11 [6da5c9c](../../commit/6da5c9c) - __(Semyon Pupkov)__ fix: old UnproccesableError class does not work across alias
+
+#### v1.10.1
+ * 2016-12-26 [dac3ab4](../../commit/dac3ab4) - __(Michail Merkushin)__ Update CHANGELOG.md
  * 2016-12-26 [535561f](../../commit/535561f) - __(Michail Merkushin)__ Release 1.10.1
  * 2016-12-26 [7663d55](../../commit/7663d55) - __(Michail Merkushin)__ fix: Include Newrelic modules for different Rails versions
 
