@@ -1,5 +1,10 @@
 
 #### [Current]
+ * 2017-02-18 [5d849e5](../../commit/5d849e5) - __(Semyon Pupkov)__ Release 1.11.0
+ * 2017-01-10 [e7048d7](../../commit/e7048d7) - __(Semyon Pupkov)__ feature: render status in body for unproccesable error
+
+#### v1.10.2
+ * 2017-01-26 [8de8fde](../../commit/8de8fde) - __(Denis Korobicyn)__ Release 1.10.2
  * 2017-01-11 [6da5c9c](../../commit/6da5c9c) - __(Semyon Pupkov)__ fix: old UnproccesableError class does not work across alias
 
 #### v1.10.1
