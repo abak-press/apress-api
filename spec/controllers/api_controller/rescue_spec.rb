@@ -87,6 +87,7 @@ describe Apress::Api::ApiController::Base, type: :controller do
         get :index
 
         expect(response.status).to eq 422
+        expect(json['status']).to eq 422
         expect(json['errors']).to eq [{"access_id" => "empty"}]
       end
     end
@@ -107,6 +108,7 @@ describe Apress::Api::ApiController::Base, type: :controller do
         get :index
 
         expect(response.status).to eq 422
+        expect(json['status']).to eq 422
         expect(json['errors']).to eq [{"message" => "custom error"}]
       end
     end
@@ -122,6 +124,7 @@ describe Apress::Api::ApiController::Base, type: :controller do
         get :index
 
         expect(response.status).to eq 422
+        expect(json['status']).to eq 422
         expect(json['errors']).to eq [{"access_id" => "empty"}]
       end
     end
@@ -137,6 +140,7 @@ describe Apress::Api::ApiController::Base, type: :controller do
         get :index
 
         expect(response.status).to eq 422
+        expect(json['status']).to eq 422
         expect(json['errors']).to eq [{"access_id" => "empty"}, {'other' => 'error'}]
       end
     end

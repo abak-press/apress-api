@@ -40,6 +40,8 @@ module Apress
         end
 
         def unprocessable(exception_or_errors)
+          @status = 422
+
           @errors =
             if exception_or_errors.respond_to?(:record)
               exception_or_errors.record.errors
@@ -49,7 +51,7 @@ module Apress
               exception_or_errors
             end
           @errors = Array.wrap(@errors)
-          render 'apress/api/shared/unproccesable_errors', status: 422
+          render 'apress/api/shared/unprocessable_errors', status: @status
         end
 
         def render_error(status, exception = nil)

@@ -9,7 +9,11 @@ module Swagger
 
               included do
                 swagger_schema name.to_sym do
-                  key :required, :errors
+                  key :required, [:errors, :status]
+
+                  property :status do
+                    key :type, :string
+                  end
 
                   property :errors do
                     key :type, :array
