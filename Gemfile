@@ -9,6 +9,7 @@ if RUBY_VERSION < '2'
   gem 'pg', '< 0.19.0'
   gem "pry-debugger", ">= 0.2.3"
   gem 'nokogiri', '< 1.7.0'
+  gem 'dry-configurable', '< 0.6.2'
 else
   gem "test-unit"
   gem "pry-byebug"
