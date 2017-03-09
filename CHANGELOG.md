@@ -1,5 +1,10 @@
 
 #### [Current]
+ * 2017-02-10 [a54b723](../../commit/a54b723) - __(Nikolay Kondratyev)__ feat(gems): update swagger-core dependency
+ * 2017-02-21 [45b4bee](../../commit/45b4bee) - __(Andrey Shmelkov)__ feature(pagination): Link, X-Per-Page, X-Page headers
+
+#### v1.11.0
+ * 2017-02-18 [c067f7c](../../commit/c067f7c) - __(Semyon Pupkov)__ Update CHANGELOG.md
  * 2017-02-18 [5d849e5](../../commit/5d849e5) - __(Semyon Pupkov)__ Release 1.11.0
  * 2017-01-10 [e7048d7](../../commit/e7048d7) - __(Semyon Pupkov)__ feature: render status in body for unproccesable error
 
