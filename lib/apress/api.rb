@@ -6,5 +6,6 @@ require "jbuilder"
 require "api_auth"
 require "attr_extras"
 require 'swagger/blocks'
+require 'active_hash'
 require "apress/api/version"
 require "apress/api/engine"

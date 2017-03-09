@@ -21,6 +21,10 @@ module Apress
         ::MultiJson.use :oj
 
         JbuilderTemplate.send :include, Apress::Api::Extensions::Jbuilder::JbuilderTemplate
+
+        if File.exist?(app.root.join('config', 'app_clients_versions.yml'))
+          app.middleware.use Apress::Api::Middleware::MobileVersion
+        end
       end
 
       initializer "apress-api-factories", after: "factory_girl.set_factory_paths" do
