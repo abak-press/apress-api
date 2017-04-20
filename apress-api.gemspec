@@ -38,4 +38,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "simplecov", ">= 0.9"
   spec.add_development_dependency "factory_girl_rails", ">= 4.5"
   spec.add_development_dependency "json-schema"
+  spec.add_development_dependency "test-unit"
 end
