@@ -1,3 +1,5 @@
+require 'rails/engine'
+
 module Apress
   module Api
     class Engine < Rails::Engine
@@ -20,6 +22,7 @@ module Apress
 
         ::MultiJson.use :oj
 
+        require 'jbuilder/jbuilder_template'
         JbuilderTemplate.send :include, Apress::Api::Extensions::Jbuilder::JbuilderTemplate
       end
 
