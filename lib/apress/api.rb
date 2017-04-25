@@ -6,5 +6,16 @@ require "jbuilder"
 require "api_auth"
 require "attr_extras"
 require 'swagger/blocks'
+require 'apress/documentation'
 require "apress/api/version"
 require "apress/api/engine"
+
+module Apress
+  module Api
+    module Swagger
+      def self.const_missing(name)
+        ::Apress::Documentation::Swagger.const_get(name)
+      end
+    end
+  end
+end

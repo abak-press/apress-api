@@ -1,6 +1,6 @@
 module Swagger
   module V1
-    class Root < ::Apress::Api::Swagger::Schema
+    class Root < ::Apress::Documentation::Swagger::Schema
       swagger_root do
         key :swagger, '2.0'
         info do
