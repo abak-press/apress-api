@@ -3,7 +3,7 @@ module Swagger
     module Models
       module Apress
         module Api
-          class Client < ::Apress::Api::Swagger::Schema
+          class Client < ::Apress::Documentation::Swagger::Schema
             swagger_schema name.to_sym do
               key :required, [
                 :id,

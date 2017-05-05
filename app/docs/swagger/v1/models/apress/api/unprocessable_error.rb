@@ -3,7 +3,7 @@ module Swagger
     module Models
       module Apress
         module Api
-          class UnprocessableError < ::Apress::Api::Swagger::Schema
+          class UnprocessableError < ::Apress::Documentation::Swagger::Schema
             module Schema
               extend ActiveSupport::Concern
 
