@@ -10,13 +10,15 @@ module Apress
           rescue_from "Pundit::NotAuthorizedError", with: :forbidden
 
           rescue_from "ActiveRecord::RecordNotFound",
-                      "ActionController::ParameterMissing",
                       "ActionView::MissingTemplate",
                       "ActionController::UnknownFormat",
                       "ActiveRecord::SubclassNotFound",
                       with: :not_found unless Rails.env.development?
 
           rescue_from 'ActiveRecord::RecordInvalid', with: :unprocessable
+
+          rescue_from 'ActionController::ParameterMissing',
+                      with: :parameter_missing
 
           helper_method :show_errors?
         end
@@ -52,6 +54,12 @@ module Apress
             end
           @errors = Array.wrap(@errors)
           render 'apress/api/shared/unprocessable_errors', status: @status
+        end
+
+        def parameter_missing(exception)
+          @status = 400
+          @errors = [{exception.param => 'missing'}]
+          render 'apress/api/shared/parameter_missing_errors', status: @status
         end
 
         def render_error(status, exception = nil)
