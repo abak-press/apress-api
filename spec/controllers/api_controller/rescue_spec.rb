@@ -145,4 +145,23 @@ describe Apress::Api::ApiController::Base, type: :controller do
       end
     end
   end
+
+  context '#parameter_missing' do
+    context 'when rescued' do
+      controller do
+        def index
+          params = ActionController::Parameters.new
+          params.require(:a)
+        end
+      end
+
+      it 'renders errors' do
+        get :index
+
+        expect(response.status).to eq 400
+        expect(json['status']).to eq 400
+        expect(json['errors']).to eq [{"a" => "missing"}]
+      end
+    end
+  end
 end
