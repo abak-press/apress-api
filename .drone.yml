@@ -28,5 +28,5 @@ build:
     pull: true
     when:
       event: push
-      commands:
-        - release-gem
+    commands:
+      - release-gem
