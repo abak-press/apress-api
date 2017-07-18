@@ -1,7 +1,11 @@
+# v1.14.0
+
+* 2017-07-18 [4a4a008](../../commit/4a4a008) - __(Nikolay Kondratyev)__ Release 1.14.0 
+* 2017-07-18 [df408d2](../../commit/df408d2) - __(Nikolay Kondratyev)__ feat(swagger): add type representing a links object 
+
 # v1.13.0
 
 * 2017-07-13 [10c6c6c](../../commit/10c6c6c) - __(Dmitry Bochkarev)__ fix(drone): неверные отступы в .drone.yml 
-* 2017-07-10 [c7d0d85](../../commit/c7d0d85) - __(Dmitry Bochkarev)__ Release 1.13.0 
 при возникновении ошибки ActionController::ParameterMissing
 возвращается 400 статус, а не 404
 
