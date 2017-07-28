@@ -1,6 +1,10 @@
+# v1.15.0
+
+* 2017-07-28 [9475fc9](../../commit/9475fc9) - __(Artem Napolskih)__ Release 1.15.0 
+* 2017-07-28 [ee55219](../../commit/ee55219) - __(Artem Napolskih)__ feature: no find Client when access_id not given 
+
 # v1.14.0
 
-* 2017-07-18 [4a4a008](../../commit/4a4a008) - __(Nikolay Kondratyev)__ Release 1.14.0 
 * 2017-07-18 [df408d2](../../commit/df408d2) - __(Nikolay Kondratyev)__ feat(swagger): add type representing a links object 
 
 # v1.13.0
