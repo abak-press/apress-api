@@ -12,6 +12,8 @@ module Apress
 
           @client.regenerate_tokens!
         end
+
+        ActiveSupport.run_load_hooks(:"apress/api/tokens_controller", self)
       end
     end
   end
