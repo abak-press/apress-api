@@ -1,6 +1,10 @@
+# v1.16.0
+
+* 2017-07-31 [a1b4379](../../commit/a1b4379) - __(Artem Napolskih)__ Release 1.16.0 
+* 2017-07-31 [2da0e08](../../commit/2da0e08) - __(Artem Napolskih)__ feature: Add tokens controller load hook 
+
 # v1.15.0
 
-* 2017-07-28 [9475fc9](../../commit/9475fc9) - __(Artem Napolskih)__ Release 1.15.0 
 * 2017-07-28 [ee55219](../../commit/ee55219) - __(Artem Napolskih)__ feature: no find Client when access_id not given 
 
 # v1.14.0
