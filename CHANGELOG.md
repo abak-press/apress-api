@@ -1,6 +1,10 @@
+# v1.16.1
+
+* 2017-08-02 [f959efe](../../commit/f959efe) - __(Artem Napolskih)__ Release 1.16.1 
+* 2017-08-02 [9f03ee6](../../commit/9f03ee6) - __(Artem Napolskih)__ fix: rails 4 New Relic support 
+
 # v1.16.0
 
-* 2017-07-31 [a1b4379](../../commit/a1b4379) - __(Artem Napolskih)__ Release 1.16.0 
 * 2017-07-31 [2da0e08](../../commit/2da0e08) - __(Artem Napolskih)__ feature: Add tokens controller load hook 
 
 # v1.15.0
