@@ -11,7 +11,9 @@ module Apress
       #
       # Returns boolean
       def call
-        @client = Client.find_by_access_id(access_id)
+        return false unless access_id
+
+        @client = Apress::Api::Client.find_by_access_id(access_id)
         return false unless client
 
         return false if client.secret_token_expired?
