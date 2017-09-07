@@ -37,7 +37,8 @@ RSpec.configure do |c|
   c.include Apress::Api::Rspec::Utils, type: :request
 
   c.before(:context, :api) do
-    @swagger_schema = Apress::Api::Swagger::Generator.new.data
+    classes = Apress::Api::Swagger::Schema.swagger_classes
+    @swagger_schema = ::Swagger::Blocks.build_root_json(classes)
     @api = Swagger.build(@swagger_schema.to_json, format: :json)
   end
 
