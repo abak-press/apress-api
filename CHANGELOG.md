@@ -1,6 +1,14 @@
+# v1.17.0
+
+* 2017-09-07 [17bd44c](../../commit/17bd44c) - __(Denis Korobicyn)__ Release 1.17.0 
+* 2017-06-28 [96ff1ea](../../commit/96ff1ea) - __(Denis Korobicyn)__ fix: namespaces for default responses 
+https://jira.railsc.ru/browse/PC4-19812
+
+* 2017-04-25 [0cc731e](../../commit/0cc731e) - __(Denis Korobicyn)__ feature: move swagger to apress-documentation 
+https://jira.railsc.ru/browse/PC4-19470
+
 # v1.16.1
 
-* 2017-08-02 [f959efe](../../commit/f959efe) - __(Artem Napolskih)__ Release 1.16.1 
 * 2017-08-02 [9f03ee6](../../commit/9f03ee6) - __(Artem Napolskih)__ fix: rails 4 New Relic support 
 
 # v1.16.0
