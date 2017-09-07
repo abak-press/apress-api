@@ -4,15 +4,12 @@ module Apress
   module Api
     class Engine < Rails::Engine
       config.autoload_paths << config.root.join("lib")
-      config.paths.add 'app/docs', :eager_load => true
+      config.paths.add 'app/docs', eager_load: false
+
+      Apress::Documentation.add_load_path(config.root.join('app/docs'))
 
       initializer "apress-api", before: :load_init_rb do |app|
         app.config.paths["db/migrate"].concat(config.paths["db/migrate"].expanded)
-
-        glob = config.root.join('app/docs/**/*.rb')
-        app.config.to_prepare do
-          Dir[glob].each { |file| require_dependency file }
-        end
 
         app.config.api = {
           secret_token_ttl: 1.hour,

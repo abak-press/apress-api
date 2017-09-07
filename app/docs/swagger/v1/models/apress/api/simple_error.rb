@@ -3,7 +3,7 @@ module Swagger
     module Models
       module Apress
         module Api
-          class SimpleError < ::Apress::Api::Swagger::Schema
+          class SimpleError < ::Apress::Documentation::Swagger::Schema
             swagger_schema name.to_sym do
               keys = [
                 :status,
