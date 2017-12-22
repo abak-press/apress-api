@@ -40,7 +40,6 @@ module Apress
         # :nocov:
         if defined?(::NewRelic)
           require "new_relic/agent/instrumentation/rails#{Rails::VERSION::MAJOR}/action_controller"
-          require "new_relic/agent/instrumentation/rails#{Rails::VERSION::MAJOR}/errors"
 
           include ::NewRelic::Agent::Instrumentation::ControllerInstrumentation
 
