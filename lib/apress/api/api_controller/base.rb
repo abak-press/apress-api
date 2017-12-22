@@ -46,7 +46,6 @@ module Apress
 
           if Rails::VERSION::MAJOR == 3
             include ::NewRelic::Agent::Instrumentation::Rails3::ActionController
-            include ::NewRelic::Agent::Instrumentation::Rails3::Errors
           end
         end
         # :nocov:
