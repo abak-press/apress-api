@@ -1,6 +1,24 @@
+# v1.18.0
+
+* 2018-01-30 [26a7884](../../commit/26a7884) - __(Dmitry Bochkarev)__ chore: restrict pg version 
+* 2018-01-30 [d77862e](../../commit/d77862e) - __(Dmitry Bochkarev)__ Release 1.18.0 
+http://samson.railsc.ru/projects/pulscen-production/deploys/9785
+https://jira.railsc.ru/browse/PC4-21470
+
+https://github.com/abak-press/pulscen/commit/ff1e27f89c45a30bb0479383d864a15a526422fd
+https://github.com/abak-press/pulscen/pull/16479
+
+* 2017-12-22 [33d5523](../../commit/33d5523) - __(Dmitry Bochkarev)__ fix(newrelic): не реквайрим устаревший модуль 
+https://jira.railsc.ru/browse/PC4-19900
+
+* 2017-12-22 [5132ad7](../../commit/5132ad7) - __(Dmitry Bochkarev)__ fix(new_relic): выпил ::NewRelic::Agent::Instrumentation::Rails3::Errors 
+https://jira.railsc.ru/browse/PC4-19900
+
+модуль был удален, использвание методов в коде нет:
+https://jira.railsc.ru/browse/PC4-19900?focusedCommentId=146483&page=com.atlassian.jira.plugin.system.issuetabpanels:comment-tabpanel#comment-146483
+
 # v1.17.1
 
-* 2017-09-07 [386d1c8](../../commit/386d1c8) - __(Denis Korobicyn)__ Release 1.17.1 
 * 2017-09-07 [08c3799](../../commit/08c3799) - __(Denis Korobicyn)__ fix: api tests 
 
 # v1.17.0
