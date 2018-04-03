@@ -26,6 +26,10 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency "jbuilder", ">= 2.3.1"
   spec.add_runtime_dependency "attr_extras", ">= 4.4.0"
   spec.add_runtime_dependency 'swagger-core', '>= 0.3.0'
+  spec.add_runtime_dependency 'interactor'
+  spec.add_runtime_dependency 'pundit'
+
+  spec.add_runtime_dependency 'resque-integration'
   spec.add_runtime_dependency 'apress-documentation', '>= 0.2.0'
 
   spec.add_development_dependency "bundler", "~> 1.7"
@@ -39,4 +43,6 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "factory_girl_rails", ">= 4.5"
   spec.add_development_dependency "json-schema"
   spec.add_development_dependency "test-unit"
+  spec.add_development_dependency "mock_redis"
+  spec.add_development_dependency 'pry-byebug'
 end

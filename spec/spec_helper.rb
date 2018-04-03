@@ -1,4 +1,5 @@
 require "bundler/setup"
+require 'pry-byebug'
 
 require "simplecov"
 SimpleCov.start "rails" do
@@ -11,9 +12,14 @@ end
 
 require "apress/api"
 
+require 'mock_redis'
+redis = MockRedis.new
+Resque.redis = redis
+
 require "factory_girl_rails"
 require "timecop"
 require "combustion"
+
 Combustion.initialize! :all do
   config.cache_store = :null_store if defined?(ActiveSupport::Cache::NullStore)
 end
