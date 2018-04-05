@@ -3,6 +3,8 @@ Rails.application.routes.draw do
     resources :clients, only: [] do
       resources :tokens, only: [:create]
     end
+
+    post 'callbacks/:service' => 'callbacks#create'
   end
 
   scope module: "apress", constraints: {domain: :current} do
