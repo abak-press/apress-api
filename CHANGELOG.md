@@ -1,7 +1,11 @@
+# v1.19.0
+
+* 2018-04-03 [12aa8e0](../../commit/12aa8e0) - __(Denis Korobicyn)__ feature: add callbacks logic 
+https://jira.railsc.ru/browse/ORDERS-1484
+
 # v1.18.0
 
 * 2018-01-30 [26a7884](../../commit/26a7884) - __(Dmitry Bochkarev)__ chore: restrict pg version 
-* 2018-01-30 [d77862e](../../commit/d77862e) - __(Dmitry Bochkarev)__ Release 1.18.0 
 http://samson.railsc.ru/projects/pulscen-production/deploys/9785
 https://jira.railsc.ru/browse/PC4-21470
 
