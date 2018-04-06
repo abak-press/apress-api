@@ -7,6 +7,8 @@ module Apress
       def call
         services = Apress::Api::Callbacks::Config.services(event)
 
+        return if services.blank?
+
         ::Resque.redis.multi do
           services.each do |service|
             ::Resque.enqueue(

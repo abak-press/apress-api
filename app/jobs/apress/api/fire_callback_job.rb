@@ -4,7 +4,8 @@ module Apress
       include Resque::Integration
 
       queue :api_callbacks
-      retrys
+      retrys delay: 10, limit: 2
+      @retry_exceptions = [Apress::Api::Callbacks::FireCallbackError]
 
       def self.perform(service, event, params)
         callback_class = "#{service}_client/fire_callback".camelize.constantize

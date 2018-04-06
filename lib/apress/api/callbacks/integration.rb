@@ -10,7 +10,7 @@ module Apress
             callback = at.shift
 
             public_send(callback, *at) do
-              params =
+              hash_params =
                 if params.respond_to?(:call)
                   params.call(self)
                 else
@@ -18,7 +18,7 @@ module Apress
                     hash[param] = public_send(param)
                   end
                 end
-              ::Apress::Api::DelayedFireCallback.call!(event: event, params: params)
+              ::Apress::Api::DelayedFireCallback.call!(event: event, params: hash_params)
             end
           end
         end
