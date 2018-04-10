@@ -1,3 +1,10 @@
+# v1.19.1
+
+* 2018-04-10 [8d8e284](../../commit/8d8e284) - __(Denis Korobicyn)__ Release 1.19.1 
+* 2018-04-10 [bf3b4ce](../../commit/bf3b4ce) - __(Denis Korobicyn)__ chore(dorne): allow only master release 
+* 2018-04-06 [553c515](../../commit/553c515) - __(Denis Korobicyn)__ fix(callbacks): add fatal exeptions 
+https://jira.railsc.ru/browse/ORDERS-1484
+
 # v1.19.0
 
 * 2018-04-03 [12aa8e0](../../commit/12aa8e0) - __(Denis Korobicyn)__ feature: add callbacks logic 
