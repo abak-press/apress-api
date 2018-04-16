@@ -13,12 +13,21 @@ describe Apress::Api::FireCallbackJob, type: :job do
       end
     end
 
-    context 'in case error' do
+    context 'in case of retry error' do
       let(:event) { 'some_error_event' }
-      it 'throws Callbacks::Error' do
+      it 'throws Callbacks::FireCallbackError' do
         expect do
           described_class.perform("error", event, params)
         end.to raise_error(Apress::Api::Callbacks::FireCallbackError)
+      end
+    end
+
+    context 'in case of repeat error' do
+      let(:event) { 'repeat_error' }
+      it 'throws Callbacks::RepeatCallbackError' do
+        expect do
+          described_class.perform("error", event, params)
+        end.to raise_error(Apress::Api::Callbacks::RepeatCallbackError)
       end
     end
   end

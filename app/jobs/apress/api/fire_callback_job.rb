@@ -6,7 +6,11 @@ module Apress
 
       queue :api_callbacks
 
-      @retry_exceptions = {Apress::Api::Callbacks::FireCallbackError => [1, 60, 300, 3600]}
+      @retry_exceptions = {
+        Apress::Api::Callbacks::FireCallbackError => [1, 60, 300, 3600],
+        Apress::Api::Callbacks::RepeatCallbackError => 300
+      }
+      @ignore_exceptions = [Apress::Api::Callbacks::RepeatCallbackError]
 
       def self.perform(service, event, params)
         callback_class = "#{service}_client/fire_callback".camelize.constantize
