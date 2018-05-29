@@ -7,17 +7,16 @@ module Apress
             if @context.controller.perform_caching
               result = Rails.cache.fetch(_cache_key(key || collection, options), options) do
                 {
-                  total_entries: collection.total_entries,
-                  total_pages: collection.total_pages,
+                  headers: _pagination_headers(collection),
                   content: _scope { yield self }
                 }
               end
 
-              _set_pagination_headers(result[:total_entries], result[:total_pages])
+              _set_pagination_headers(result[:headers])
 
               merge! result[:content]
             else
-              _set_pagination_headers(collection.total_entries, collection.total_pages)
+              _set_pagination_headers(_pagination_headers(collection))
 
               yield
             end
@@ -25,9 +24,15 @@ module Apress
 
           private
 
-          def _set_pagination_headers(total_entries, total_pages)
-            @context.controller.response.headers["X-Total-Count"] = total_entries.to_s
-            @context.controller.response.headers["X-Total-Pages"] = total_pages.to_s
+          def _set_pagination_headers(headers)
+            @context.controller.response.headers.merge!(headers)
+          end
+
+          def _pagination_headers(collection)
+            ::Apress::Api::ApiController::PaginationHelper.headers(
+              collection,
+              @context.controller.request.url
+            )
           end
         end
       end
