@@ -1,6 +1,11 @@
+# v1.20.0
+
+* 2018-05-29 [7910458](../../commit/7910458) - __(Denis Korobicyn)__ Release 1.20.0wq 
+* 2018-05-29 [876a71c](../../commit/876a71c) - __(Denis Korobicyn)__ feature: add correct headers on json pagination cache 
+https://jira.railsc.ru/browse/ORDERS-1524
+
 # v1.19.2
 
-* 2018-04-25 [8a377aa](../../commit/8a377aa) - __(Denis Korobicyn)__ Release 1.19.2 
 * 2018-04-16 [243a81f](../../commit/243a81f) - __(Denis Korobicyn)__ feature(callbacks): add inf reapet errors 
 https://jira.railsc.ru/browse/ORDERS-1484
 
