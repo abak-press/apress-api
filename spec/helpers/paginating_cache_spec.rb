@@ -19,18 +19,21 @@ def jbuild(source_key, collection)
 
   resolver = ActionView::FixtureResolver.new(partials)
   lookup_context.view_paths = [resolver]
+  allow(controller).to receive_message_chain(:request, :url).and_return('https://example.com/')
   assign(:collection, collection)
   MultiJson.load(render(template: source_key))
 end
 
 describe 'paginating_cache', type: :view do
-  let(:collection) { double(total_entries: 30, total_pages: 10, cache_key: 'test') }
+  let(:collection) { double(total_entries: 30, total_pages: 10, per_page: 5, current_page: 2, cache_key: 'test') }
   context 'when caching disabled' do
     it 'sets headers and yield view' do
       result = jbuild('test.json.jbuilder', collection)
       expect(result['title']).to eq 'test'
       expect(view.controller.response.headers['X-Total-Count']).to eq '30'
       expect(view.controller.response.headers['X-Total-Pages']).to eq '10'
+      expect(view.controller.response.headers['X-Per-Page']).to eq '5'
+      expect(view.controller.response.headers['X-Page']).to eq '2'
     end
   end
 
