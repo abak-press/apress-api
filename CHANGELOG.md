@@ -1,6 +1,10 @@
+# v1.20.1
+
+* 2018-05-30 [4ffdc34](../../commit/4ffdc34) - __(Denis Korobicyn)__ Version 1.20.1 
+* 2018-05-30 [8f0930f](../../commit/8f0930f) - __(Denis Korobicyn)__ fix: autoload for pagination headers 
+
 # v1.20.0
 
-* 2018-05-29 [7910458](../../commit/7910458) - __(Denis Korobicyn)__ Release 1.20.0wq 
 * 2018-05-29 [876a71c](../../commit/876a71c) - __(Denis Korobicyn)__ feature: add correct headers on json pagination cache 
 https://jira.railsc.ru/browse/ORDERS-1524
 
