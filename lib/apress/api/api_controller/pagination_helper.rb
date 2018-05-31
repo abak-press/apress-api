@@ -27,6 +27,8 @@ module Apress
 
             %(<#{url}>; rel="#{rel}")
           end
+        rescue Addressable::URI::InvalidURIError
+          []
         end
 
         def self.page_numbers(collection)

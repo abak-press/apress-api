@@ -19,7 +19,6 @@ def jbuild(source_key, collection)
 
   resolver = ActionView::FixtureResolver.new(partials)
   lookup_context.view_paths = [resolver]
-  allow(controller).to receive_message_chain(:request, :url).and_return('https://example.com/')
   assign(:collection, collection)
   MultiJson.load(render(template: source_key))
 end
