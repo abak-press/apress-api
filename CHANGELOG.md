@@ -1,3 +1,8 @@
+# v1.20.2
+
+* 2018-05-31 [06dae90](../../commit/06dae90) - __(Denis Korobicyn)__ Release 1.20.2 
+* 2018-05-31 [e950f34](../../commit/e950f34) - __(Denis Korobicyn)__ fix: add rescue instead of stub in tests 
+
 # v1.20.1
 
 * 2018-05-30 [4ffdc34](../../commit/4ffdc34) - __(Denis Korobicyn)__ Version 1.20.1 
