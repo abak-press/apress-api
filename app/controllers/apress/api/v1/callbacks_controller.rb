@@ -7,16 +7,13 @@ module Apress
         def create
           authorize :'apress/api/callback'
 
-          job = Apress::Api::Callbacks::Config.handler(
-            service: params.require(:service),
-            event: params.require(:event)
-          ).camelize.constantize
           event_params = params[:params] || {}
 
-          if job.respond_to?(:enqueue)
-            job.enqueue(event_params)
-          else
-            ::Resque.enqueue(job, event_params)
+          Resque.redis.multi do
+            Apress::Api::Callbacks::Config.handlers(
+              service: params.require(:service),
+              event: params.require(:event)
+            ).each { |handler| Resque.enqueue(Apress::Api::EventHandlerEnqueueingJob, handler, event_params) }
           end
 
           head 201

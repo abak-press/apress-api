@@ -9,7 +9,7 @@ module Apress
         class << self
           delegate :add_service, :services, to: :instance
           delegate :allowed_client?, :add_client, to: :instance
-          delegate :add_handler, :handler, to: :instance
+          delegate :add_handler, :handlers, to: :instance
           delegate :valid_event?, to: :instance
         end
 
@@ -18,7 +18,7 @@ module Apress
         end
 
         def add_handler(service:, event:, handler:)
-          handlers[service][event] = handler
+          (handlers_config[service][event] ||= []) << handler
         end
 
         def add_client(access_id)
@@ -33,14 +33,14 @@ module Apress
           events[event]
         end
 
-        def handler(service:, event:)
-          handlers.fetch(service).fetch(event)
+        def handlers(service:, event:)
+          handlers_config.fetch(service).fetch(event)
         end
 
         private
 
-        def handlers
-          @handlers ||= ::Hash.new { |hash, key| hash[key] = {} }
+        def handlers_config
+          @handlers_config ||= ::Hash.new { |hash, key| hash[key] = {} }
         end
 
         def events
