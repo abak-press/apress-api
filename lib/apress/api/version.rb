@@ -1,5 +1,5 @@
 module Apress
   module Api
-    VERSION = '1.20.2'.freeze
+    VERSION = '1.21.0'.freeze
   end
 end

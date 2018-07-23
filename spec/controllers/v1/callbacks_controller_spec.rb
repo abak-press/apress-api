@@ -14,8 +14,9 @@ describe Apress::Api::V1::CallbacksController, type: :controller do
       end
 
       context 'when params are valid' do
-        it 'calls job' do
-          expect(Resque).to receive(:enqueue).with(HandlerJob, {})
+        it 'calls enqueueing job for each handler' do
+          expect(Resque).to receive(:enqueue).with(Apress::Api::EventHandlerEnqueueingJob, 'handler_job', {})
+          expect(Resque).to receive(:enqueue).with(Apress::Api::EventHandlerEnqueueingJob, 'second_handler_job', {})
           post :create, service: 'external_service', event: 'other_event'
           expect(response.status).to eq 201
         end
