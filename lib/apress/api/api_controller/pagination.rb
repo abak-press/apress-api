@@ -1,4 +1,5 @@
 require 'addressable/uri'
+require 'apress/api/api_controller/pagination_helper'
 module Apress
   module Api
     module ApiController
@@ -51,7 +52,7 @@ module Apress
         def pagination_headers(collection)
           raise LinkHeaderAppendNotImplemented if headers['Link'].present?
 
-          headers.merge!(PaginationHelper.headers(collection, request.url))
+          headers.merge!(::Apress::Api::ApiController::PaginationHelper.headers(collection, request.url))
         end
       end
     end

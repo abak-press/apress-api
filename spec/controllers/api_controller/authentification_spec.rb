@@ -39,7 +39,11 @@ describe Apress::Api::ApiController::Base, type: :controller do
 
   context "when api client is optional" do
     controller do
-      skip_before_filter :authenticate
+      if (Rails::VERSION::MAJOR == 4 && Rails::VERSION::MINOR == 2) || Rails::VERSION::MAJOR > 4
+        skip_before_action :authenticate
+      else
+        skip_before_filter :authenticate
+      end
 
       def index
         render json: {status: "ok"}

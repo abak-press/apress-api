@@ -1,5 +1,13 @@
 require "spec_helper"
 
+def form_params(p)
+  if Rails::VERSION::MAJOR > 4
+    {params: p}
+  else
+    p
+  end
+end
+
 describe Apress::Api::V1::CallbacksController, type: :controller do
   let!(:client) { create "api/client" }
   before do
@@ -17,7 +25,7 @@ describe Apress::Api::V1::CallbacksController, type: :controller do
         it 'calls enqueueing job for each handler' do
           expect(Resque).to receive(:enqueue).with(Apress::Api::EventHandlerEnqueueingJob, 'handler_job', {})
           expect(Resque).to receive(:enqueue).with(Apress::Api::EventHandlerEnqueueingJob, 'second_handler_job', {})
-          post :create, service: 'external_service', event: 'other_event'
+          post :create, form_params(service: 'external_service', event: 'other_event')
           expect(response.status).to eq 201
         end
       end
@@ -25,7 +33,7 @@ describe Apress::Api::V1::CallbacksController, type: :controller do
       context 'when job is missing' do
         it 'raises KeyError' do
           expect do
-            post :create, service: 'service', event: 'some_event'
+            post :create, form_params(service: 'service', event: 'some_event')
           end.to raise_error(KeyError)
         end
       end
@@ -33,7 +41,7 @@ describe Apress::Api::V1::CallbacksController, type: :controller do
 
     context "when client isn't allowed" do
       it 'returns 403' do
-        post :create, service: 'service', event: 'some_event'
+        post :create, form_params(service: 'service', event: 'some_event')
 
         expect(response.status).to eq 403
       end

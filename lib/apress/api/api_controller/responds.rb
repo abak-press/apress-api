@@ -5,7 +5,11 @@ module Apress
         extend ActiveSupport::Concern
 
         included do
-          before_filter :set_json_format
+          if (Rails::VERSION::MAJOR == 4 && Rails::VERSION::MINOR == 2) || Rails::VERSION::MAJOR > 4
+            before_action :set_json_format
+          else
+            before_filter :set_json_format
+          end
         end
 
         private

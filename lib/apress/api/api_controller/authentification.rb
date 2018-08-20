@@ -7,8 +7,13 @@ module Apress
         included do
           attr_reader :current_api_client
 
-          before_filter :find_session
-          before_filter :authenticate
+          if (Rails::VERSION::MAJOR == 4 && Rails::VERSION::MINOR == 2) || Rails::VERSION::MAJOR > 4
+            before_action :find_session
+            before_action :authenticate
+          else
+            before_filter :find_session
+            before_filter :authenticate
+          end
         end
 
         private

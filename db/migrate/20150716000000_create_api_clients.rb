@@ -1,5 +1,10 @@
-# coding: utf-8
-class CreateApiClients < ActiveRecord::Migration
+if Rails::VERSION::MAJOR > 4
+  MIGRATION_CLASS = ActiveRecord::Migration[4.2]
+else
+  MIGRATION_CLASS = ActiveRecord::Migration
+end
+
+class CreateApiClients < MIGRATION_CLASS
   def up
     create_table :api_clients do |t|
       t.string :access_id, null: false, limit: 36

@@ -27,7 +27,7 @@ module Apress
 
             %(<#{url}>; rel="#{rel}")
           end
-        rescue Addressable::URI::InvalidURIError
+        rescue ::Addressable::URI::InvalidURIError
           []
         end
 
