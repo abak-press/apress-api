@@ -1,6 +1,10 @@
+# v1.22.0
+
+* 2018-08-22 [7bb90fa](../../commit/7bb90fa) - __(Artem Napolskih)__ chore: Add automatic publication 
+* 2018-08-20 [ce83eba](../../commit/ce83eba) - __(Artem Napolskih)__ feat: rails 5-x support 
+
 # v1.21.0
 
-* 2018-07-23 [b0c93da](../../commit/b0c93da) - __(Zhidkov Denis)__ Release 1.21.0 
 * 2018-07-19 [09ac671](../../commit/09ac671) - __(Zhidkov Denis)__ feat: allow to add several handlers for each service event 
 https://jira.railsc.ru/browse/ORDERS-1916
 
