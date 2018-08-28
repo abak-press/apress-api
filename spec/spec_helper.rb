@@ -24,6 +24,7 @@ Combustion.initialize! :all do
   config.cache_store = :null_store if defined?(ActiveSupport::Cache::NullStore)
 end
 
+require "rails-controller-testing" if Rails::VERSION::MAJOR > 4
 require "rspec/rails"
 
 RSpec.configure do |config|

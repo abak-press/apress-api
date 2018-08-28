@@ -5,6 +5,7 @@ require "multi_json"
 require "jbuilder"
 require "api_auth"
 require "attr_extras"
+require "addressable"
 require 'interactor'
 require 'pundit'
 require 'swagger/blocks'

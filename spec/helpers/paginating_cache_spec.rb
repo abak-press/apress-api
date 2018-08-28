@@ -23,6 +23,14 @@ def jbuild(source_key, collection)
   MultiJson.load(render(template: source_key))
 end
 
+def view_prefix
+  if Rails::VERSION::MAJOR > 4
+    'jbuilder/views'
+  else
+    'jbuilder'
+  end
+end
+
 describe 'paginating_cache', type: :view do
   let(:collection) { double(total_entries: 30, total_pages: 10, per_page: 5, current_page: 2, cache_key: 'test') }
   context 'when caching disabled' do
@@ -42,14 +50,14 @@ describe 'paginating_cache', type: :view do
     end
 
     it 'cache result with collection key' do
-      expect(Rails.cache).to receive(:fetch).with("jbuilder/test", skip_digest: true).and_call_original
+      expect(Rails.cache).to receive(:fetch).with("#{view_prefix}/test", skip_digest: true).and_call_original
 
       jbuild('test.json.jbuilder', collection)
     end
 
     it 'cache results with custom composite key' do
       expect(Rails.cache).to \
-        receive(:fetch).with("jbuilder/v1/test", expire_in: 30.minutes, skip_digest: true).and_call_original
+        receive(:fetch).with("#{view_prefix}/v1/test", expire_in: 30.minutes, skip_digest: true).and_call_original
 
       jbuild('test_with_cache_key.json.jbuilder', collection)
     end
