@@ -1,3 +1,8 @@
+# v1.22.1
+
+* 2018-08-30 [02be014](../../commit/02be014) - __(Ilya Zhidkov)__ Release 1.22.1 
+* 2018-08-30 [1328469](../../commit/1328469) - __(Ilya Zhidkov)__ fix(gemspec): add min version for addressable 
+
 # v1.22.0
 
 * 2018-08-22 [7bb90fa](../../commit/7bb90fa) - __(Artem Napolskih)__ chore: Add automatic publication 
