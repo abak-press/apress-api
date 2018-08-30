@@ -26,6 +26,7 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency 'swagger-core', '>= 0.3.0'
   spec.add_runtime_dependency 'interactor'
   spec.add_runtime_dependency 'pundit'
+  spec.add_runtime_dependency 'addressable', '>= 2.4.0'
 
   spec.add_runtime_dependency 'resque-integration'
   spec.add_runtime_dependency 'apress-documentation', '>= 0.2.0'
