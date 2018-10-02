@@ -1,6 +1,10 @@
+# v1.23.0
+
+* 2018-10-01 [c235b5e](../../commit/c235b5e) - __(Artem Napolskih)__ Release 1.23.0 
+* 2018-10-01 [d0e5a8e](../../commit/d0e5a8e) - __(Artem Napolskih)__ feat: adds ability to configure root page 
+
 # v1.22.1
 
-* 2018-08-30 [02be014](../../commit/02be014) - __(Ilya Zhidkov)__ Release 1.22.1 
 * 2018-08-30 [1328469](../../commit/1328469) - __(Ilya Zhidkov)__ fix(gemspec): add min version for addressable 
 
 # v1.22.0
