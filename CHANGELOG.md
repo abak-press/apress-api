@@ -1,6 +1,11 @@
+# v1.24.0
+
+* 2019-09-19 [46e6337](../../commit/46e6337) - __(Andrew N. Shalaev)__ Release v1.24.0 
+* 2019-09-19 [d2ec039](../../commit/d2ec039) - __(Andrew N. Shalaev)__ fix: send 401 Unathorized instead 403 
+https://jira.railsc.ru/browse/BPC-15268
+
 # v1.23.0
 
-* 2018-10-01 [c235b5e](../../commit/c235b5e) - __(Artem Napolskih)__ Release 1.23.0 
 * 2018-10-01 [d0e5a8e](../../commit/d0e5a8e) - __(Artem Napolskih)__ feat: adds ability to configure root page 
 
 # v1.22.1
