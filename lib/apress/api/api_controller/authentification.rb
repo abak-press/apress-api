@@ -25,7 +25,7 @@ module Apress
         end
 
         def authenticate
-          forbidden unless @current_api_client
+          unauthorized unless @current_api_client
         end
       end
     end

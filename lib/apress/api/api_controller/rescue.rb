@@ -41,6 +41,10 @@ module Apress
           render_error(400, exception)
         end
 
+        def unauthorized(exception = nil)
+          render_error(401, exception)
+        end
+
         def unprocessable(exception_or_errors)
           @status = 422
 

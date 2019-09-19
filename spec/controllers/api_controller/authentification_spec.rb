@@ -28,9 +28,9 @@ describe Apress::Api::ApiController::Base, type: :controller do
       context "when auth failed" do
         let(:auth_service) { double("auth_service", call: false, client: nil) }
 
-        it "returns 403" do
+        it "returns 401" do
           get :index
-          expect(response.status).to eq 403
+          expect(response.status).to eq 401
           expect(controller.current_api_client).to be nil
         end
       end

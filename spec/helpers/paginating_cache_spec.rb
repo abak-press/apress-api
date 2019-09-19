@@ -24,7 +24,7 @@ def jbuild(source_key, collection)
 end
 
 def view_prefix
-  if Rails::VERSION::MAJOR > 4
+  if Rails::VERSION::MAJOR == 5 && Rails::VERSION::MINOR >= 2
     'jbuilder/views'
   else
     'jbuilder'
