@@ -1,5 +1,7 @@
 # Apress::Api
 
+[![Gem Version](https://badge.fury.io/rb/apress-api.svg)](https://badge.fury.io/rb/apress-api)
+
 Базовый контроллер АПИ с авторизацией HMAC
 
 ## Installation
