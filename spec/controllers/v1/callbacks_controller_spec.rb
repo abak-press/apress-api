@@ -18,7 +18,7 @@ describe Apress::Api::V1::CallbacksController, type: :controller do
   describe "#create" do
     context "when client present and allowed" do
       before do
-        client.update_attributes(access_id: 'service_access_id')
+        client.update(access_id: 'service_access_id')
       end
 
       context 'when params are valid' do

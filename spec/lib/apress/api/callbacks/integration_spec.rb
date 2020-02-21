@@ -17,7 +17,7 @@ describe Apress::Api::Callbacks::Integration, type: :mixin do
         expect(Apress::Api::DelayedFireCallback).to \
           receive(:call!).with(event: 'dynamic_params_event', params: {name: 'test_2 stuff'})
 
-        model.update_attributes(name: 'test_2')
+        model.update(name: 'test_2')
       end
     end
   end
