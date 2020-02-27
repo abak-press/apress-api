@@ -1,30 +1,13 @@
 require 'spec_helper'
-SIMPLE_TEST = <<-JBUILDER
-  json.paginating_cache! @collection, nil, skip_digest: true do
-    json.title 'test'
-  end
-JBUILDER
-
-TEST_WITH_CACHING = <<-JBUILDER
-  json.paginating_cache! @collection, ['v1', @collection], expire_in: 30.minutes, skip_digest: true do
-    json.title 'test'
-  end
-JBUILDER
 
 def jbuild(source_key, collection)
-  partials = {
-    'test.json.jbuilder' => SIMPLE_TEST,
-    'test_with_cache_key.json.jbuilder' => TEST_WITH_CACHING
-  }
-
-  resolver = ActionView::FixtureResolver.new(partials)
-  lookup_context.view_paths = [resolver]
   assign(:collection, collection)
   MultiJson.load(render(template: source_key))
 end
 
 def view_prefix
-  if Rails::VERSION::MAJOR == 5 && Rails::VERSION::MINOR >= 2
+  if (Rails::VERSION::MAJOR == 5 && Rails::VERSION::MINOR == 2) ||
+    (Rails::VERSION::MAJOR == 6 && Rails::VERSION::MINOR == 0)
     'jbuilder/views'
   else
     'jbuilder'
