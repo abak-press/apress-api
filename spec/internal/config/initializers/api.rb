@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 Apress::Api::Callbacks::Config.add_client('service_access_id')
 
 Apress::Api::Callbacks::Config.add_service(service: 'service', event: 'some_event')

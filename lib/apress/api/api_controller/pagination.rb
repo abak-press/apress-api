@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 require 'addressable/uri'
 require 'apress/api/api_controller/pagination_helper'
 module Apress

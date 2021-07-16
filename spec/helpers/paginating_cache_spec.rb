@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 require 'spec_helper'
 SIMPLE_TEST = <<-JBUILDER
   json.paginating_cache! @collection, nil, skip_digest: true do

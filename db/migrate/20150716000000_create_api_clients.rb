@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 if Rails::VERSION::MAJOR > 4
   MIGRATION_CLASS = ActiveRecord::Migration[4.2]
 else

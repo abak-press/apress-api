@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 Rails.application.routes.draw do
   current_api_routes = lambda do
     resources :clients, only: [] do
