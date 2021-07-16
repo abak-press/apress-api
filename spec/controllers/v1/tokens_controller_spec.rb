@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 require "spec_helper"
 
 def form_params(p)

@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 source "https://gems.railsc.ru"
 source "https://rubygems.org"
 

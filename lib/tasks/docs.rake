@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 namespace :docs do
   desc 'Generate api documentation'
   task generate: :environment do

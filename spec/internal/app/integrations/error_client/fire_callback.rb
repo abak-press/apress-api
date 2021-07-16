@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 module ErrorClient
   class FireCallback < Apress::Api::Callbacks::BaseCallback
     class RepeatError < StandardError

@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 require 'spec_helper'
 
 describe Apress::Api::FireCallbackJob, type: :job do
