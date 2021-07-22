@@ -4,6 +4,9 @@ type: docker
 name: build
 
 volumes:
+  - name: rubygems
+    host:
+      path: /home/data/drone/rubygems
   - name: bundle
     host:
       path: /home/data/drone/gems
@@ -61,6 +64,9 @@ steps:
     event: push
     branch: master
     status: success
+  volumes:
+  - name: rubygems
+    path: /root/.gem
   commands:
     - release-gem --public
 
