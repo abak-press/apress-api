@@ -1,6 +1,16 @@
+# v1.24.2
+
+* 2021-07-22 [79fba01](../../commit/79fba01) - __(Andrew N. Shalaev)__ fix: try to mount missed volume 
+* 2021-07-16 [37a8921](../../commit/37a8921) - __(Andrew N. Shalaev)__ Release v1.24.2 
+* 2021-07-16 [c261182](../../commit/c261182) - __(Andrew N. Shalaev)__ feature: freeze string literals 
+* 2021-07-16 [2e9f3f3](../../commit/2e9f3f3) - __(Andrew N. Shalaev)__ feature: add ruby2.4 support 
+https://jira.railsc.ru/browse/BPC-19154
+
+* 2019-09-20 [f397049](../../commit/f397049) - __(Andrew N. Shalaev)__ Release v1.24.1 
+* 2019-09-20 [929480d](../../commit/929480d) - __(Andrew N. Shalaev)__ feature: add bage with version for link to rubygems.org 
+
 # v1.24.0
 
-* 2019-09-19 [46e6337](../../commit/46e6337) - __(Andrew N. Shalaev)__ Release v1.24.0 
 * 2019-09-19 [d2ec039](../../commit/d2ec039) - __(Andrew N. Shalaev)__ fix: send 401 Unathorized instead 403 
 https://jira.railsc.ru/browse/BPC-15268
 
