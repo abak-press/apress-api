@@ -56,6 +56,20 @@ module Apress
         include Authentification
         include Pagination
 
+        before_action :render_forbidden, if: :reject_request?
+
+        private
+
+        def reject_request?
+          return false if Rails.env.test?
+
+          request.bot? || current_user.nil? || current_user.provider_sid?
+        end
+
+        def render_forbidden
+          render status: :forbidden, json: {status: 403, error: :forbidden}
+        end
+
         ActiveSupport.run_load_hooks(:action_controller, self)
         ActiveSupport.run_load_hooks(:"apress/api/api_controller", self)
       end

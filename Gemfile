@@ -7,3 +7,4 @@ gemspec
 
 
 gem "pg", "< 1.0", require: false
+gem 'loofah', '< 2.20.0', require: false
