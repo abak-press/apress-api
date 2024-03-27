@@ -30,15 +30,6 @@ steps:
     POSTGRES_DB: docker
   detach: true
 
-- name: build on ruby2.2
-  image: abakpress/ruby-app:2.2-latest
-  environment:
-    TEST_DB_HOST: postgres
-    TEST_DB_NAME: docker
-    TEST_DB_USERNAME: postgres
-    BUNDLE_PATH: /bundle/2.2
-  <<: *spec_step_common
-
 - name: build on ruby2.3
   image: abakpress/ruby-app:2.3-latest
   environment:
