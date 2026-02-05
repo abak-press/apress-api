@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require "spec_helper"
 
 describe Apress::Api::V1::TokensController, type: :controller do

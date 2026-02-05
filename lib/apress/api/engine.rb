@@ -1,10 +1,12 @@
+# frozen_string_literal: true
+
 require 'rails/engine'
 
 module Apress
   module Api
     class Engine < Rails::Engine
       config.autoload_paths << config.root.join("lib")
-      config.paths.add 'app/docs', :eager_load => true
+      config.paths.add 'app/docs', eager_load: true
 
       initializer "apress-api", before: :load_init_rb do |app|
         app.config.paths["db/migrate"].concat(config.paths["db/migrate"].expanded)

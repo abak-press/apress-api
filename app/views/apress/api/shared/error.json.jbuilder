@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 json.status @status
 
 if @exception && show_errors?

@@ -1,4 +1,7 @@
+# frozen_string_literal: true
+
 require "bundler/setup"
+require 'pry-byebug'
 
 require "simplecov"
 SimpleCov.start "rails" do
@@ -14,6 +17,7 @@ require "apress/api"
 require "factory_girl_rails"
 require "timecop"
 require "combustion"
+
 Combustion.initialize! :all do
   config.cache_store = :null_store if defined?(ActiveSupport::Cache::NullStore)
 end

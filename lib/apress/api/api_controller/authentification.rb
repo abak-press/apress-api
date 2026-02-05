@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Apress
   module Api
     module ApiController
@@ -7,8 +9,8 @@ module Apress
         included do
           attr_reader :current_api_client
 
-          before_filter :find_session
-          before_filter :authenticate
+          before_action :find_session
+          before_action :authenticate
         end
 
         private
@@ -16,6 +18,7 @@ module Apress
         def find_session
           auth_service = AuthService.new(request)
           return unless auth_service.call
+
           @current_api_client = auth_service.client
         end
 

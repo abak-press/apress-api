@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Swagger
   module V1
     module Models

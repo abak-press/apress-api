@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Apress
   module Api
     class DeprecatedVersionsController < ApiController::Base

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 json.status @status
 
 json.errors do

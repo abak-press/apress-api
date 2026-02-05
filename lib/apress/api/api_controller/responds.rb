@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Apress
   module Api
     module ApiController
@@ -5,7 +7,7 @@ module Apress
         extend ActiveSupport::Concern
 
         included do
-          before_filter :set_json_format
+          before_action :set_json_format
         end
 
         private

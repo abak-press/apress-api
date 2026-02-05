@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Apress
   module Api
     class AuthService
@@ -11,6 +13,8 @@ module Apress
       #
       # Returns boolean
       def call
+        return false unless access_id
+
         @client = Apress::Api::Client.find_by_access_id(access_id)
         return false unless client
 

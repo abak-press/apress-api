@@ -1,10 +1,12 @@
+# frozen_string_literal: true
+
 module Apress
   module Api
     module ApiController
       class Base < ActionController::Metal
         abstract!
 
-        if Rails::VERSION::MAJOR == 4 && Rails::VERSION::MINOR > 0
+        if (Rails::VERSION::MAJOR == 4 && Rails::VERSION::MINOR > 0) || Rails::VERSION::MAJOR > 4
           include AbstractController::Rendering
           include ActionView::Rendering
         end
@@ -14,7 +16,7 @@ module Apress
         include ActionController::Rendering
         include ActionController::Renderers::All
         include ActionController::ConditionalGet
-        include ActionController::RackDelegation
+        include ActionController::RackDelegation if Rails::VERSION::MAJOR < 5
         include ActionController::ForceSSL
         include AbstractController::Callbacks
         include ActionController::Rescue

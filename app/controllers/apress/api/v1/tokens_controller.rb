@@ -1,8 +1,10 @@
+# frozen_string_literal: true
+
 module Apress
   module Api
     module V1
       class TokensController < ApiController::Base
-        skip_before_filter :authenticate, only: :create
+        skip_before_action :authenticate, only: :create
 
         def create
           @client = Apress::Api::Client.find_by_access_id!(params.require(:client_id))
@@ -13,6 +15,8 @@ module Apress
           @client.regenerate_tokens!
         end
       end
+
+      ActiveSupport.run_load_hooks(:"apress/api/tokens_controller", self)
     end
   end
 end

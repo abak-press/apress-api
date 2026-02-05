@@ -18,8 +18,8 @@ Gem::Specification.new do |spec|
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ["lib"]
 
-  spec.add_runtime_dependency "rails", ">= 3.1.0", "< 5.0.0"
-  spec.add_runtime_dependency "pg", ">= 0.16"
+  spec.add_runtime_dependency "rails", ">= 4.2.0", "< 5"
+  spec.add_runtime_dependency "pg", '< 1.0.0'
   spec.add_runtime_dependency "api-auth", ">= 1.3.1"
   spec.add_runtime_dependency "oj", ">= 2.9.9"
   spec.add_runtime_dependency "multi_json", ">= 1.11.2"
@@ -28,15 +28,15 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency 'swagger-core', '>= 0.3.0'
   spec.add_runtime_dependency 'swagger-blocks', '>= 1.3'
 
-  spec.add_development_dependency "bundler", "~> 1.7"
+  spec.add_development_dependency "bundler", '~> 1.17.3'
   spec.add_development_dependency "rake", "~> 10.0"
-  spec.add_development_dependency "rspec", ">= 3.2"
-  spec.add_development_dependency "rspec-rails", ">= 3.2"
+  spec.add_development_dependency "rspec-rails", '~> 3.9.1'
   spec.add_development_dependency "combustion", ">= 0.5.4"
-  spec.add_development_dependency "appraisal"
+  spec.add_development_dependency "appraisal", '>= 1.0.2'
   spec.add_development_dependency "timecop"
   spec.add_development_dependency "simplecov", ">= 0.9"
   spec.add_development_dependency "factory_girl_rails", ">= 4.5"
   spec.add_development_dependency "json-schema"
   spec.add_development_dependency "test-unit"
+  spec.add_development_dependency 'pry-byebug'
 end
